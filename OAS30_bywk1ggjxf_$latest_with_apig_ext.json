@@ -1,0 +1,99 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "http-crud-tutorial-api",
+    "version" : "2021-07-24 18:37:40UTC"
+  },
+  "servers" : [ {
+    "url" : "https://bywk1ggjxf.execute-api.ca-central-1.amazonaws.com/{basePath}",
+    "variables" : {
+      "basePath" : {
+        "default" : ""
+      }
+    }
+  } ],
+  "paths" : {
+    "/item/{id}" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /item/{id}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:ca-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ca-central-1:025355929809:function:http-crud-tutorial-function/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 1000
+        }
+      },
+      "delete" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for DELETE /item/{id}"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:ca-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ca-central-1:025355929809:function:http-crud-tutorial-function/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 1000
+        }
+      }
+    },
+    "/items" : {
+      "get" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for GET /items"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:ca-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ca-central-1:025355929809:function:http-crud-tutorial-function/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 1000
+        }
+      }
+    },
+    "/item" : {
+      "put" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for PUT /item"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:ca-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ca-central-1:025355929809:function:http-crud-tutorial-function/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 1000
+        }
+      },
+      "post" : {
+        "responses" : {
+          "default" : {
+            "description" : "Default response for POST /item"
+          }
+        },
+        "x-amazon-apigateway-integration" : {
+          "payloadFormatVersion" : "2.0",
+          "type" : "aws_proxy",
+          "httpMethod" : "POST",
+          "uri" : "arn:aws:apigateway:ca-central-1:lambda:path/2015-03-31/functions/arn:aws:lambda:ca-central-1:025355929809:function:http-crud-tutorial-function/invocations",
+          "connectionType" : "INTERNET",
+          "timeoutInMillis" : 1000
+        }
+      }
+    }
+  },
+  "x-amazon-apigateway-importexport-version" : "1.0"
+}
